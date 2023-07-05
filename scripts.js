@@ -25,7 +25,11 @@ window.addEventListener("load",function(){
 
     let takeoffButton=document.getElementById("takeoff");
     takeoffButton.addEventListener("click",function(event){
-        console.log("takeoff button clicked");
+        //console.log("takeoff button clicked");
+        if(window.confirm("Confirm that the shuttle is ready for takeoff?"))
+        {
+            document.getElementById("flightStatus").textContent="Shuttle in flight.";
+            console.log("Shuttle in flight.");}
     });
 
     let landingButton=document.getElementById("landing");
@@ -38,3 +42,5 @@ window.addEventListener("load",function(){
         console.log("mission abort button clicked");
     });
 });
+
+let 
