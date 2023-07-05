@@ -41,6 +41,7 @@ window.addEventListener("load",function(){
     missionabortButton.addEventListener("click",function(event){
         console.log("mission abort button clicked");
     });
+
+    document.getElementById("shuttleBackground").style.backgroundColor="blue";
 });
 
-let 
