@@ -29,7 +29,13 @@ window.addEventListener("load",function(){
         if(window.confirm("Confirm that the shuttle is ready for takeoff?"))
         {
             document.getElementById("flightStatus").textContent="Shuttle in flight.";
-            console.log("Shuttle in flight.");}
+            console.log("Shuttle in flight.");
+            document.getElementById("shuttleBackground").style.backgroundColor="blue";
+            //document.getElementById("spaceShuttleHeight");
+            let currentHeight = parseInt(spaceShuttleHeight.textContent);
+            let newHeight = currentHeight + 10000;
+            spaceShuttleHeight.textContent = newHeight;
+        }
     });
 
     let landingButton=document.getElementById("landing");
@@ -42,6 +48,6 @@ window.addEventListener("load",function(){
         console.log("mission abort button clicked");
     });
 
-    document.getElementById("shuttleBackground").style.backgroundColor="blue";
+    
 });
 
