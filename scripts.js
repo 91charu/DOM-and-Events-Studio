@@ -55,7 +55,17 @@ window.addEventListener("load",function(){
 
     let missionabortButton=document.getElementById("missionAbort");
     missionabortButton.addEventListener("click",function(event){
-        console.log("mission abort button clicked");
+        //console.log("mission abort button clicked");
+        if(window.confirm("Confirm that you want to abort the mission."))
+        {
+            document.getElementById("flightStatus").textContent="Mission aborted.";
+            console.log("Mission aborted.");
+            document.getElementById("shuttleBackground").style.backgroundColor="green";
+            //document.getElementById("spaceShuttleHeight");
+            let currentHeight = parseInt(spaceShuttleHeight.textContent);
+            let newHeight = 0;
+            spaceShuttleHeight.textContent = newHeight;
+        }
     });
 
     
