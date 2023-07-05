@@ -40,7 +40,17 @@ window.addEventListener("load",function(){
 
     let landingButton=document.getElementById("landing");
     landingButton.addEventListener("click",function(event){
-        console.log("landing button clicked");
+        //console.log("landing button clicked");
+        if(window.confirm("The shuttle is landing. Landing gear engaged."))
+        {
+            document.getElementById("flightStatus").textContent="The shuttle has landed.";
+            console.log("The shuttle has landed.");
+            document.getElementById("shuttleBackground").style.backgroundColor="green";
+            //document.getElementById("spaceShuttleHeight");
+            let currentHeight = parseInt(spaceShuttleHeight.textContent);
+            let newHeight = 0;
+            spaceShuttleHeight.textContent = newHeight;
+        }
     });
 
     let missionabortButton=document.getElementById("missionAbort");
