@@ -3,24 +3,43 @@
 window.addEventListener("load",function(){
     console.log('window loaded');
 
+    //let rocket = document.getElementById("rocket");
+    function left() {
+        let rocket = document.getElementById("rocket");
+        let currentLeft = parseInt(rocket.style.left);
+        rocket.style.left = (currentLeft - 10)+"px";
+        console.log("left button clicked");
+    }
+    let leftButton=document.getElementById("left");
+    leftButton.addEventListener("click",left)
+        //console.log("up button clicked");
+    
+        //let rocket = document.getElementById("rocket");
+        function right() {
+            let rocket = document.getElementById("rocket");
+            let currentRight = parseInt(rocket.style.right);
+            rocket.style.right = (currentRight + 10)+"px";
+            console.log("right button clicked");
+        }
+    let rightButton=document.getElementById("right");
+    rightButton.addEventListener("click",right);
+        //console.log("down button clicked");
+    
+
     let upButton=document.getElementById("up");
     upButton.addEventListener("click",function(event){
+        let currentHeight = parseInt(spaceShuttleHeight.textContent);
+        let newHeight = currentHeight + 10000;
+        spaceShuttleHeight.textContent = newHeight;
         console.log("up button clicked");
     });
 
     let downButton=document.getElementById("down");
     downButton.addEventListener("click",function(event){
+        let currentHeight = parseInt(spaceShuttleHeight.textContent);
+        let newHeight = currentHeight - 10000;
+        spaceShuttleHeight.textContent = newHeight;
         console.log("down button clicked");
-    });
-
-    let rightButton=document.getElementById("right");
-    rightButton.addEventListener("click",function(event){
-        console.log("right button clicked");
-    });
-
-    let leftButton=document.getElementById("left");
-    leftButton.addEventListener("click",function(event){
-        console.log("left button clicked");
     });
 
     let takeoffButton=document.getElementById("takeoff");
@@ -68,6 +87,6 @@ window.addEventListener("load",function(){
         }
     });
 
-    
 });
+
 
